@@ -1,5 +1,7 @@
 import UIKit
 
+// #1
+
 var Journal: [String: [String:UInt]] // Name Date Score
 
 Journal = ["Усов":["01-01-2017":5,"05-01-2017":5],
@@ -28,5 +30,18 @@ print("\nСредний бал группы - \(Float(sumOFAllMarks/Double(Journ
 
 for student in ResOfStudents{
     print("\(student.0) - \(student.1)")
+}
+
+// #2
+
+typealias Chessman = [String: (alpha: Character, num:Int)?]
+var Chessmans: Chessman = ["Пешка":("A",3), "Конь":("G",5), "Слон": nil]
+
+for (name, coordinates) in Chessmans {
+    if coordinates != nil {
+        print("Coordinates of \(name) is \(coordinates)")
+    }else{
+        print("\(name) is not found")
+    }
 }
 
