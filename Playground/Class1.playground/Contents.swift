@@ -35,8 +35,8 @@ class Chessman{
         self.setCoordinates(char: coordinates.0, num: coordinates.1)
     }
     
-    func info() -> Void {
-        print("Фигура \(self.type) \(self.type.rawValue) цвет \(self.color) \((self.coordinates == nil) ? "не размещена на игровой площадке" : "координаты \(String(describing: self.coordinates?.0)) \(String(describing: self.coordinates?.1))")")
+    func info(){
+        print("Фигура \(self.type) \(self.type.rawValue) цвет \(self.color.rawValue) \((self.coordinates == nil) ? "не размещена на игровой площадке" : "координаты \(String(describing: self.coordinates?.0))) \(String(describing: self.coordinates?.1))")")
     }
     
     func setCoordinates(char: String, num: Int) {
