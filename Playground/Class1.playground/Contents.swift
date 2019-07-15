@@ -7,7 +7,6 @@ class Chessman{
         case white = "белый"
         case black = "черный"
     }
-    
     enum ChessFigures: String{
         case king = "♔" // Король
         case queen = "♕" // Королева
@@ -55,5 +54,9 @@ a.kill()
 a.info()
 
 var QueenBlack = Chessman(type: .queen, color: .black, figure: Chessman.ChessFigures.queen.rawValue, coordinates: ("A",6))
+QueenBlack.info()
+QueenBlack.setCoordinates(char: "B", num: 2)
+QueenBlack.info()
+QueenBlack.kill()
 QueenBlack.info()
 
