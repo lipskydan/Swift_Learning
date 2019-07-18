@@ -83,29 +83,28 @@ class gameDesk{
     
     func printDesk() -> Void {
         let letters:[String] = ["A","B","C","D","E","F","G","H"]
-        var tmp: String = ""
+        var finalDesk = String()
         for i in 1...8 {
-            tmp += String(i)
+            finalDesk += String(i)
             for j in letters{
                 if (desk[i]?[j] != nil){
-                 tmp += " " + desk[i]![j]!.figureSymbol
+                 finalDesk += " " + desk[i]![j]!.figureSymbol
                 }else{
-                    tmp += " _"
+                    finalDesk += " _"
                 }
                 if j == "H" {
-                    tmp += "\n"
+                    finalDesk += "\n"
                 }
             }
         }
         
         for i in letters {
             if i == "A"{
-              tmp += "  "
+              finalDesk += "  "
             }
-            tmp += i + " "
+            finalDesk += i + " "
         }
-        print(tmp)
-
+        print(finalDesk)
     }
 }
 
